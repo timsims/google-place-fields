@@ -1,0 +1,24 @@
+{
+  "name": "google-place-fields",
+  "version": "1.0.0",
+  "description": "TypeScript definitions for Google Places API fields",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "google",
+    "places",
+    "api",
+    "types",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2"
+  }
+}
