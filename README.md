@@ -5,7 +5,11 @@ TypeScript definitions for Google Places API v1 fields, providing strongly-typed
 ## Installation
 
 ```bash
+npm install google-place-fields
+# or
 pnpm install google-place-fields
+# or
+yarn add google-place-fields
 ```
 
 ## Usage
@@ -52,35 +56,40 @@ async function searchPlaces(query: string): Promise<Place[]> {
 
 This package includes comprehensive type definitions for Google Places API v1 responses, including:
 
-- `Place`: The main interface representing a place
-- `DisplayName`: Interface for place name information
+- `Place`: The main interface representing a place with all its properties
+- `LocalizedText`: Interface for localized text content with language code
+- `AddressComponent`: Interface for structured address components
+- `PlusCode`: Interface for Plus Code location reference
+- `LatLng`: Interface for geographical coordinates
+- `Viewport`: Interface for location viewport
+- `AuthorAttribution`: Interface for author information
+- `Review`: Interface for place reviews
 - `Photo`: Interface for place photos
 - `OpeningHours`: Interface for opening hours data
-- `Location`: Interface for geographical coordinates
+- `Period`: Interface for time periods when a place is open
+- `Point`: Interface for opening/closing time points
+- `TimePeriod`: Interface for time periods
 - `BusinessStatus`: Enum for business operation status
-- `PriceLevel`: Enum for price levels
-- `AtmosphereData`: Interface for place atmosphere information
-- `AccessibilityData`: Interface for accessibility information
-- `NoiseLevel`: Enum for place noise levels
-- And many more...
+- `PriceRange`: Interface for price level information
+- `Money`: Interface for representing currency amounts
+- `FuelOptions`: Interface for fuel station information
+- `EVChargeOptions`: Interface for EV charging station data
+- `AccessibilityOptions`: Interface for accessibility information
+- `GoogleMapsLinks`: Interface for various Google Maps action links
 
-All types are fully documented with JSDoc comments.
-
-## Breaking Changes in v2.0.0
-
-- Updated to match Google Places API v1 data structures
-- Changed `id` field to `name` in Place interface
-- Removed `Rating` interface and moved rating fields directly to Place interface
-- Added new `AtmosphereData` and `AccessibilityData` interfaces
-- Added `NoiseLevel` enum
-- Changed `reservationProvider` to `reservationsSupported`
-- Removed `permanentlyClosed` and `adrFormatAddress` fields
-- Made `displayName`, `primaryTypeId`, and `types` required fields
-- Updated converter class to properly handle all fields
+All types are fully documented with JSDoc comments directly from the Google Places API documentation.
 
 ## Documentation
 
 All interfaces are based on the [Google Places API v1 Reference](https://developers.google.com/maps/documentation/places/web-service/reference/rest/v1/places).
+
+## Features
+
+- Full TypeScript type definitions for Google Places API v1
+- Detailed JSDoc comments on all interfaces and properties
+- Utility converter class to easily transform API responses into typed objects
+- Support for all field types in the Places API including specialized fields like EV charging, fuel options, etc.
+- Enums for all enumerable values from the API
 
 ## License
 
